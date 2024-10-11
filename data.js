@@ -419,4 +419,53 @@ export const data = [
     return res
     `,
   },
+  {
+    problemNo: 125,
+    heading: "125. Valid Palindrome",
+    image: "./images/125.png",
+    code: `
+    l, r = 0, len(s)-1
+
+    while l<=r:
+      while l<r and not self.alphaNumeric(s[l]):
+        l+=1
+      while l<r and not self.alphaNumeric(s[r]):
+        r-=1
+      if s[r].lower() != s[l].lower():
+       return False
+      l, r = l+1, r-1
+
+    return True
+
+    def alphaNumeric(self, ch):
+      return ord('a')<=ord(ch)<=ord('z') or ord('A')<=ord(ch)<=ord('Z') or ord('0') <= ord(ch) <= ord('9')
+    `,
+  },
+  {
+    problemNo: 136,
+    heading: "136. Single Number",
+    image: "./images/136.png",
+    code: `
+    res = 0
+    for i in nums:
+      res = res^i
+    return res
+    `,
+  },
+  {
+    problemNo: 141,
+    heading: "141. Linked List Cycle",
+    image: "./images/141.png",
+    code: `
+    fast = slow = head
+    
+    while fast and fast.next:
+      fast = fast.next.next
+      slow = slow.next
+      if slow == fast:
+      return True
+    
+    return False
+    `,
+  },
 ];
