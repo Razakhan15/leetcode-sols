@@ -447,8 +447,10 @@ export const data = [
     image: "./images/136.png",
     code: `
     res = 0
+
     for i in nums:
       res = res^i
+      
     return res
     `,
   },
@@ -458,7 +460,7 @@ export const data = [
     image: "./images/141.png",
     code: `
     fast = slow = head
-    
+
     while fast and fast.next:
       fast = fast.next.next
       slow = slow.next
@@ -466,6 +468,24 @@ export const data = [
       return True
     
     return False
+    `,
+  },
+  {
+    problemNo: 144,
+    heading: "144. Binary Tree Preorder Traversal",
+    image: "./images/144.png",
+    code: `
+    res = []
+
+    def dfs(node):
+      if not node:
+        return
+      res.append(node.val)
+      dfs(node.left)
+      dfs(node.right)
+
+    dfs(root)
+    return res
     `,
   },
 ];
