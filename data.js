@@ -520,4 +520,19 @@ export const data = [
     return l1
     `,
   },
+  {
+    problemNo: 168,
+    heading: "168. Excel Sheet Column Title",
+    image: "./images/168.png",
+    code: `
+    res = ''
+
+    while columnNumber:
+      offset = (columnNumber-1)%26
+      res = chr(ord('A')+offset)+res
+      columnNumber = (columnNumber-1)//26
+
+    return res
+    `,
+  },
 ];
