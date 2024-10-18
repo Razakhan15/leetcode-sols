@@ -535,4 +535,20 @@ export const data = [
     return res
     `,
   },
+  {
+    problemNo: 169,
+    heading: "169. Majority Element",
+    image: "./images/169.png",
+    code: `
+    obj = {}
+    res = maxCnt = 0
+
+    for i in nums:
+      obj[i] = 1 + obj.get(i, 0)
+      res = i if obj[i]>maxCnt else res
+      maxCnt = max(maxCnt, obj[i])
+    
+    return res
+    `,
+  },
 ];
