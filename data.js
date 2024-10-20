@@ -551,4 +551,31 @@ export const data = [
     return res
     `,
   },
+  {
+    problemNo: 171,
+    heading: "171. Excel Sheet Column Number",
+    image: "./images/171.png",
+    code: `
+    res = 0
+
+    for i in columnTitle:
+      res = res*26 + ord(i)-ord('A') + 1
+
+    return res
+    `,
+  },
+  {
+    problemNo: 190,
+    heading: "190. Reverse Bits",
+    image: "./images/190.png",
+    code: `
+    res = 0
+
+    for i in range(32):
+      res = (res<<1) + (n&1)
+      n>>=1
+    
+    return res
+    `,
+  },
 ];
