@@ -578,4 +578,62 @@ export const data = [
     return res
     `,
   },
+  {
+    problemNo: 202,
+    heading: "202. Happy Number",
+    image: "./images/202.png",
+    code: `
+    def isAlphaNum(num):
+      sum = 0
+      while num:
+        dig = num%10
+        sum += dig**2
+        num//=10
+      return sum
+
+    visit = set()
+
+    while n not in visit:
+      visit.add(n)
+      n = isAlphaNum(n)
+      if n == 1:
+        return True
+
+    return False
+    `,
+  },
+  {
+    problemNo: 203,
+    heading: "203. Remove Linked List Elements",
+    image: "./images/203.png",
+    code: `
+    dummy = ListNode(next = head)
+    prev, cur = dummy, dummy.next
+
+    while cur:
+      if cur.val == value:
+        prev = cur.next
+      else:
+        prev = cur
+      cur = cur.next
+
+    return dummy.next
+    `,
+  },
+  {
+    problemNo: 205,
+    heading: "205. Isomorphic Strings",
+    image: "./images/205.png",
+    code: `
+    mapS, mapT = {}, {}
+
+    while i, j in zip(s, t):
+      if i in mapS and mapS[i] == j or j in mapT and mapT[j] == i:
+        return False
+      mapS[i] = j
+      mapT[j] = i
+    
+    return False
+    `,
+  },
 ];
