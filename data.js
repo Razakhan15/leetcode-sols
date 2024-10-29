@@ -636,4 +636,20 @@ export const data = [
     return False
     `,
   },
+  {
+    problemNo: 206,
+    heading: "206. Reverse Linked List",
+    image: "./images/206.png",
+    code: `
+    prev = None
+
+    while head:
+      temp = head.next
+      head.next = prev
+      prev = head
+      head = temp
+      
+    return prev
+    `,
+  },
 ];
