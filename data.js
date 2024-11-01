@@ -652,4 +652,19 @@ export const data = [
     return prev
     `,
   },
+  {
+    problemNo: 217,
+    heading: "217. Contains Duplicate",
+    image: "./images/217.png",
+    code: `
+    visit = set()
+
+    for i in nums:
+      if i in visit:
+        return True
+      visit.add(i)
+    
+    return False
+    `,
+  },
 ];
