@@ -667,4 +667,19 @@ export const data = [
     return False
     `,
   },
+  {
+    problemNo: 219,
+    heading: "219. Contains Duplicate II",
+    image: "./images/219.png",
+    code: `
+    visit = {}
+
+    for j, i in enumerate(nums):
+      if i in visit and abs(visit[i]-j)<=k:
+        return True
+      visit[i] = j
+      
+    return False
+    `,
+  },
 ];
