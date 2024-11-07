@@ -682,4 +682,15 @@ export const data = [
     return False
     `,
   },
+  {
+    problemNo: 222,
+    heading: "222. Contains Duplicate II",
+    image: "./images/222.png",
+    code: `
+    if not root:
+      return 0
+
+    return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+    `,
+  },
 ];
